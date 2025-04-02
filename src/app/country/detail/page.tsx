@@ -38,11 +38,11 @@ const CountryDetail = () => {
 
     const [showSelectPurpose, setShowSelectPurpose] = useState(false)
 
-    const showSelectRef = useRef(null)
-    const showSelectTravelRef = useRef(null)
-    const showSelectPurposeRef = useRef(null)
+    const showSelectRef = useRef<HTMLDivElement | null>(null)
+    const showSelectTravelRef = useRef<HTMLDivElement | null>(null)
+    const showSelectPurposeRef = useRef<HTMLDivElement | null>(null)
 
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
         if (showSelectRef.current && !showSelectRef.current.contains(event.target)) {
             setShowSelectCountry(false); // Ẩn SelectCountry khi click ra ngoài
         }
@@ -67,7 +67,6 @@ const CountryDetail = () => {
     // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
     useEffect(() => {
         document.addEventListener('click', handleClickOutsideTravel); // Thêm sự kiện click toàn cục
-
         // Cleanup khi component unmount
         return () => {
             document.removeEventListener('click', handleClickOutsideTravel);

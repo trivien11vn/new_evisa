@@ -21,15 +21,17 @@ const SearchFlight = () => {
     const [value1] = useState(50);
     const [isDragging, setIsDragging] = useState(false);
     const [isDragging1, setIsDragging1] = useState(false);
-    const sliderRef = useRef(null);
-    const sliderRef1 = useRef(null)
     const [open1, setOpen1] = useState(false)
     const [open2, setOpen2] = useState(false)
 
+    const sliderRef = useRef<HTMLDivElement | null>(null);
+    const sliderRef1 = useRef<HTMLDivElement | null>(null);
 
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
         if (isDragging) {
             const slider = sliderRef.current;
+            if (!slider) return;
+    
             const rect = slider.getBoundingClientRect();
             const offsetX = event.clientX - rect.left;
             const newValue = Math.min(Math.max(0, (offsetX / rect.width) * 100), 100);
@@ -45,9 +47,11 @@ const SearchFlight = () => {
         setIsDragging(false); // Dừng kéo khi thả chuột
     };
 
-    const handleMouseMove1 = (event) => {
+    const handleMouseMove1 = (event: React.MouseEvent<HTMLDivElement>) => {
         if (isDragging1) {
             const slider = sliderRef1.current;
+            if(!slider) return;
+            
             const rect = slider.getBoundingClientRect();
             const offsetX = event.clientX - rect.left;
             const newValue = Math.min(Math.max(0, (offsetX / rect.width) * 100), 100);
