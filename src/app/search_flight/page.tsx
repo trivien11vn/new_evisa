@@ -18,7 +18,7 @@ const japanAir = '/assets/japanAir.png'
 
 const SearchFlight = () => {
     const [value, setValue] = useState(50);
-    const [value1, setValue1] = useState(50);
+    const [value1] = useState(50);
     const [isDragging, setIsDragging] = useState(false);
     const [isDragging1, setIsDragging1] = useState(false);
     const sliderRef = useRef(null);
