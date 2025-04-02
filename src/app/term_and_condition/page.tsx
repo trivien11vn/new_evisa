@@ -110,7 +110,7 @@ const TermAndCondition = () => {
                         Immigration Corp will only process the visa(s) indicated in your request; it assumes no responsibility for other visas required for your trip that have not been requested or which relate to stops on your trip.
                         <br />
                         <br />
-                        By submitting one or more requests to process one or more services to Immigration Corp, you accept these Terms. After receiving your full payment for your registered services, we'll send you an email with the particular notes of the required service(s) to the e-mail address provided by you (like the type of service, destination, time frame, service price etc). Your requests will be verified upon receipt of your documentation, and Immigration Corp will then begin processing your registered service(s).
+                        {`By submitting one or more requests to process one or more services to Immigration Corp, you accept these Terms. After receiving your full payment for your registered services, we'll send you an email with the particular notes of the required service(s) to the e-mail address provided by you (like the type of service, destination, time frame, service price etc). Your requests will be verified upon receipt of your documentation, and Immigration Corp will then begin processing your registered service(s).`}
                     </span>
                 </div>
                 <div className='w-full flex flex-col gap-[24px] items-start'>
@@ -144,7 +144,7 @@ const TermAndCondition = () => {
                     <span className='font-extrabold text-[28px] leading-[36px] text-[#545454] uppercase'>Payment</span>
                     <div className='w-[80px] h-[8px] bg-[#F08921]'></div>
                     <span className='font-normal text-[16px] leading-6'>
-                        An email with the title " Order#ID - Successful Payment Confirmation! " will show that we already received your payment. We will send you an email with the subject: “ Order#ID: Friendly Reminder! Your payment is pending! ” If your payment is still pending within 7 days since your order was placed successfully, we will kindly remind you about that payment. In case of your failed payment via Paypal, you will be received an email with the title: “ Order#ID - Your Payment Failed! ”
+                        {`An email with the title " Order#ID - Successful Payment Confirmation! " will show that we already received your payment. We will send you an email with the subject: “ Order#ID: Friendly Reminder! Your payment is pending! ” If your payment is still pending within 7 days since your order was placed successfully, we will kindly remind you about that payment. In case of your failed payment via Paypal, you will be received an email with the title: “ Order#ID - Your Payment Failed! ”`}
                         Any problems that result from a failed payment are not our responsibility. We only start processing the registered service(s) after receiving a full payment of your order successfully.
                     </span>
                 </div>

@@ -17,7 +17,7 @@ const ContactUs = () => {
                 <div className='w-main flex gap-[96px]'>
                     <div className='w-[596px] flex flex-col gap-[40px]'>
                         <div className='flex flex-col gap-[24px]'>
-                            <span className='font-extrabold text-[40px] leading-[52px] underline'>LET'S TALK</span>
+                            <span className='font-extrabold text-[40px] leading-[52px] underline'>{`LET'S TALK`}</span>
                             <span className='font-normal text-[16px] leading-[24px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                         </div>
                         <div className='flex flex-col gap-[8px]'>
