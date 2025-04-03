@@ -101,7 +101,7 @@ const ConfirmSuccessTransfer = () => {
                         <span className='font-bold text-[16px] leading-[24px]'>Go to my order</span>
                     </div>
                 </div>
-                <img src={paymentSuccess1} />
+                <img src={paymentSuccess1} className="hidden lg:flex"/>
             </div>
         </div>
     )
