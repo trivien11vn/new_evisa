@@ -35,7 +35,7 @@ const SelectTravel = () => {
         <div className='animate-fade-up  absolute top-[100%] left-0 right-0 flex flex-col px-2 py-4 gap-[12px] bg-white border border-[#7F7F7F] rounded-2xl'>
             <div className='flex gap-2 border border-[#7F7F7F] p-2 rounded-lg items-center'>
                 <IoSearch color='#28303F' size={20} />
-                <input placeholder='Enter input' className='outline-none' />
+                <input placeholder='Enter input' className='outline-none w-[80%]' />
             </div>
             <div className='flex flex-col gap-[12px]'>
                 <span className='font-bold text-[14px] leading-[24px]'>Most popular</span>
@@ -119,10 +119,10 @@ const SelectTravel = () => {
                         {travel[index + 4]?.flag}
                         <span className='font-normal text-[14px] leading-[24px]'>{travel[index + 4]?.name}</span>
                     </div>
-                    <div onClick={handlePrevCountry} className='cursor-pointer hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white text-[#7F7F7F] absolute top-0 right-0 w-[32px] h-[32px] rounded-full border border-[#7F7F7F] flex items-center justify-center'>
+                    <div onClick={handlePrevCountry} className='cursor-pointer hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white absolute top-0 right-0 w-[20px] p-1 h-[20px] md:p-0 md:w-[24px] md:h-[24px] lg:w-[32px] lg:h-[32px] rounded-full border border-[#7F7F7F] flex items-center justify-center'>
                         <FaChevronUp />
                     </div>
-                    <div onClick={handleNextCountry} className='cursor-pointer hover:bg-[] absolute bottom-0 right-0 w-[32px] h-[32px] rounded-full border border-[#7F7F7F] flex items-center justify-center'>
+                    <div onClick={handleNextCountry} className='cursor-pointer hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white absolute bottom-0 right-0 p-1 w-[20px] h-[20px] md:p-0 md:w-[24px] md:h-[24px] lg:w-[32px] lg:h-[32px] rounded-full border border-[#7F7F7F] flex items-center justify-center'>
                         <FaChevronDown color='#7F7F7F' />
                     </div>
                 </div>

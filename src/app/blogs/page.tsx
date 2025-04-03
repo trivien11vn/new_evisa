@@ -10,8 +10,8 @@ import { RiArrowDownWideFill } from 'react-icons/ri'
 const Blog = () => {
   return (
     <div className='w-full my-[24px] flex flex-col gap-8 relative'>
-        <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
-        <div className='w-main mx-auto flex flex-col gap-8'>
+        <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden lg:flex'></div>
+        <div className='w-full lg:w-main p-4 lg:p-0 mx-auto flex flex-col gap-8'>
             <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>BLOGS</div>
             <div className='flex justify-between'>
                 <div className="w-[70%] flex flex-col gap-[40px]">

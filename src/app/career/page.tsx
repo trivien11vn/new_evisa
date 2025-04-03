@@ -10,24 +10,24 @@ const Career = () => {
     const router = useRouter()
     return (
         <div className='w-full my-[24px] flex flex-col gap-2 relative'>
-            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
-            <div className='w-main mx-auto flex flex-col gap-8'>
+            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden lg:flex'></div>
+            <div className='w-full lg:w-main p-4 lg:p-0 mx-auto flex flex-col gap-8'>
                 <div className='flex items-center'>
-                    <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>CAREER</div>
+                    <div className='w-[860px] font-extrabold text-[32px] md:text-[48px] lg:text-[56px]'>CAREER</div>
                 </div>
                 <div className='flex flex-col gap-[40px]'>
                     <div className='w-full flex items-center justify-between'>
                         <div className='flex flex-col gap-[24px] w-[600px]'>
-                            <span className='font-extrabold text-[40px] leading-[52px] text-[#545454] underline'>JOIN OUR TEAM</span>
-                            <span className='font-normal text-[20px] leading-6 text-[#272727]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                            <span className='font-extrabold text-[28px] md:text-[32px] lg:text-[40px] text-[#545454] underline'>JOIN OUR TEAM</span>
+                            <span className='font-normal text-[16px] md:text-[20px] text-[#272727]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                         </div>
-                        <Image src={careerImage} alt="career" width={450} height={550} />
+                        <Image src={careerImage} alt="career" width={450} height={550} className='hidden lg:flex'/>
                     </div>
                     <div className='flex flex-col gap-[40px]'>
-                        <span className='font-extrabold text-[40px] leading-[52px] text-[#272727] underline'>ABOUT WORKING HERE</span>
-                        <div className='px-[2px] flex flex-col gap-[109px] items-center'>
-                            <div className='flex justify-between w-full'>
-                                <div className='w-[45%] flex flex-col gap-[24px]'>
+                        <span className='font-extrabold text-[28px] md:text-[32px] lg:text-[40px] text-[#272727] underline'>ABOUT WORKING HERE</span>
+                        <div className='px-[2px] flex flex-col gap-[24px] sm:gap-[109px] items-center'>
+                            <div className='flex flex-col gap-[24px] sm:flex-row sm:justify-between w-full'>
+                                <div className='w-full sm:w-[45%] flex flex-col gap-[24px]'>
                                     <div className='flex gap-[24px] items-center'>
                                         <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="32.5" cy="32" r="32" fill="#3B7ACC" />
@@ -38,7 +38,7 @@ const Career = () => {
                                     <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
                                     <span className='font-normal text-[16px] leading-6 text-[#545454] w-[342px]'>Enjoying challenging work and a satisfying job without any hierarchy</span>
                                 </div>
-                                <div className='w-[45%] flex flex-col gap-[24px]'>
+                                <div className='w-full sm:w-[45%] flex flex-col gap-[24px]'>
                                     <div className='flex gap-[24px] items-center'>
                                         <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="32.5" cy="32" r="32" fill="#3B7ACC" />
@@ -51,8 +51,8 @@ const Career = () => {
                                     <span className='font-normal text-[16px] leading-6 text-[#545454] w-[342px]'>Equity ownership and opportunity await</span>
                                 </div>
                             </div>
-                            <div className='flex justify-between w-full'>
-                                <div className='w-[45%] flex flex-col gap-[24px]'>
+                            <div className='flex flex-col gap-[24px] sm:flex-row sm:justify-between w-full'>
+                                <div className='w-full sm:w-[45%] flex flex-col gap-[24px]'>
                                     <div className='flex gap-[24px] items-center'>
                                         <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M31.1149 30.11L38.8929 22.333C43.1879 26.629 43.1879 33.593 38.8929 37.889C34.5969 42.185 27.6319 42.185 23.3359 37.889L31.1149 30.111M31.1149 30.11V30.111M31.1149 30.11L30.7609 38.243M31.1149 30.111H38.8929M31.1149 30.111L36.4179 35.414" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -65,7 +65,7 @@ const Career = () => {
                                     <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
                                     <span className='font-normal text-[16px] leading-6 text-[#545454] w-[342px]'>Food is on the house so it feels like home</span>
                                 </div>
-                                <div className='w-[45%] flex flex-col gap-[24px]'>
+                                <div className='w-full sm:w-[45%] flex flex-col gap-[24px]'>
                                     <div className='flex gap-[24px] items-center'>
                                         <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="32.5" cy="32" r="32" fill="#3B7ACC" />
@@ -79,8 +79,8 @@ const Career = () => {
                                     <span className='font-normal text-[16px] leading-6 text-[#545454] w-[342px]'>We have got you covered literally !</span>
                                 </div>
                             </div>
-                            <div className='flex justify-between w-full'>
-                                <div className='w-[45%] flex flex-col gap-[24px]'>
+                            <div className='flex flex-col gap-[24px] sm:flex-row sm:justify-between w-full'>
+                                <div className='w-full sm:w-[45%] flex flex-col gap-[24px]'>
                                     <div className='flex gap-[24px] items-center'>
                                         <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="32.5" cy="32" r="32" fill="#3B7ACC" />
@@ -92,7 +92,7 @@ const Career = () => {
                                     <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
                                     <span className='font-normal text-[16px] leading-6 text-[#545454] w-[342px]'>Paper the tech savvy in you with gadgets and advanced technology. </span>
                                 </div>
-                                <div className='w-[45%] flex flex-col gap-[24px]'>
+                                <div className='w-full sm:w-[45%] flex flex-col gap-[24px]'>
                                     <div className='flex gap-[24px] items-center'>
                                         <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="32.5" cy="32" r="32" fill="#3B7ACC" />
@@ -109,78 +109,78 @@ const Career = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-[1364px] mx-auto flex flex-col gap-4'>
-                <div className='w-full flex justify-between'>
+            <div className='w-full p-4 lg:p-0 lg:w-[1364px] mx-auto flex flex-col gap-4'>
+                <div className='w-full flex gap-[12px] lg:justify-between overflow-x-auto'>
                     <img
                         src={working}
                         alt="Working"
-                        className="w-[33%] h-fit object-cover"
+                        className="w-full sm:w-[33%] h-fit object-cover"
                     />
                     <img
                         src={working}
                         alt="Working"
-                        className="w-[33%] h-fit object-cover"
+                        className="w-full sm:w-[33%] h-fit object-cover"
                     />
                     <img
                         src={working}
                         alt="Working"
-                        className="w-[33%] h-fit object-cover"
+                        className="w-full sm:w-[33%] h-fit object-cover"
                     />
                 </div>
                 <div className='flex flex-col gap-[80px] items-center'>
-                    <span className='font-extrabold text-[40px] leading-[52px] underline uppercase'>Open Positions</span>
-                    <div className='w-full flex justify-between'>
-                        <div className='w-[250px] cursor-pointer h-[68px] rounded-2xl bg-[#3B7ACC] text-white uppercase flex items-center justify-center'>
+                    <span className='font-extrabold text-[28px] md:text-[32px] lg:text-[40px] underline uppercase'>Open Positions</span>
+                    <div className='w-full flex flex-wrap gap-[12px] lg:justify-between'>
+                        <div className='w-[48%] lg:w-[250px] cursor-pointer h-[68px] rounded-2xl bg-[#3B7ACC] text-white uppercase flex items-center justify-center'>
                             <span className='font-bold text-[20px] leading-[72px]'>Developer</span>
                         </div>
-                        <div className='w-[250px] cursor-pointer h-[68px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] uppercase flex items-center justify-center hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out'>
+                        <div className='w-[48%] lg:w-[250px] cursor-pointer h-[68px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] uppercase flex items-center justify-center hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out'>
                             <span className='font-bold text-[20px] leading-[72px]'>Marketing</span>
                         </div>
-                        <div className='w-[250px] cursor-pointer h-[68px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] uppercase flex items-center justify-center hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out'>
+                        <div className='w-[48%] lg:w-[250px] cursor-pointer h-[68px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] uppercase flex items-center justify-center hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out'>
                             <span className='font-bold text-[20px] leading-[72px]'>Designer</span>
                         </div>
-                        <div className='w-[250px] cursor-pointer h-[68px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] uppercase flex items-center justify-center hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out'>
+                        <div className='w-[48%] lg:w-[250px] cursor-pointer h-[68px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] uppercase flex items-center justify-center hover:bg-[#3B7ACC] hover:border-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out'>
                             <span className='font-bold text-[20px] leading-[72px]'>Researcher</span>
                         </div>
                     </div>
-                    <div className='flex flex-col gap-[32px] w-[921px]'>
+                    <div className='flex flex-col gap-[32px] w-full lg:w-[921px]'>
                         <div className='w-full flex flex-col gap-[24px]'>
                             <div className='flex w-full justify-between'>
                                 <div className='flex flex-col h-full justify-between'>
-                                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Android Engineer</span>
-                                    <span className='font-normal text-[16px] leading-[24px]'>San Francisco / New Delhi Full-Time</span>
+                                    <span className='font-bold text-[16px] md:text-[20px] text-[#545454] uppercase'>Android Engineer</span>
+                                    <span className='font-normal text-[12px] md:text-[16px]'>San Francisco / New Delhi Full-Time</span>
                                 </div>
-                                <div onClick={() => { router.push(`/${path.DETAIL_CAREER}`) }} className='cursor-pointer bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
+                                <div onClick={() => { router.push(`/${path.DETAIL_CAREER}`) }} className='cursor-pointer bg-[#F08921] rounded-lg w-[120px] h-[36px] md:w-[160px] md:h-[48px] lg:w-[250px] lg:h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
                             </div>
                             <div className='w-full h-[1px] bg-[#D3D3D3]'></div>
                         </div>
                         <div className='w-full flex flex-col gap-[24px]'>
                             <div className='flex w-full justify-between'>
                                 <div className='flex flex-col h-full justify-between'>
-                                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>iOS Engineer</span>
-                                    <span className='font-normal text-[16px] leading-[24px]'>San Francisco  Full-Time</span>
+                                    <span className='font-bold text-[16px] md:text-[20px] text-[#545454] uppercase'>iOS Engineer</span>
+                                    <span className='font-normal text-[12px] md:text-[16px]'>San Francisco  Full-Time</span>
                                 </div>
-                                <div onClick={() => { router.push(`/${path.DETAIL_CAREER}`) }} className='cursor-pointer bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
+                                <div onClick={() => { router.push(`/${path.DETAIL_CAREER}`) }} className='cursor-pointer bg-[#F08921] rounded-lg w-[120px] h-[36px] md:w-[160px] md:h-[48px] lg:w-[250px] lg:h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
                             </div>
                             <div className='w-full h-[1px] bg-[#D3D3D3]'></div>
                         </div>
                         <div className='w-full flex flex-col gap-[24px]'>
                             <div className='flex w-full justify-between'>
                                 <div className='flex flex-col h-full justify-between'>
-                                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Backend Engineer</span>
-                                    <span className='font-normal text-[16px] leading-[24px]'>New Delhi Full-Time</span>
+                                    <span className='font-bold text-[16px] md:text-[20px] text-[#545454] uppercase'>Backend Engineer</span>
+                                    <span className='font-normal text-[12px] md:text-[16px]'>New Delhi Full-Time</span>
                                 </div>
-                                <div onClick={() => { router.push(`/${path.DETAIL_CAREER}`) }} className='cursor-pointer bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
+                                <div onClick={() => { router.push(`/${path.DETAIL_CAREER}`) }} className='cursor-pointer bg-[#F08921] rounded-lg w-[120px] h-[36px] md:w-[160px] md:h-[48px] lg:w-[250px] lg:h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
                             </div>
                             <div className='w-full h-[1px] bg-[#D3D3D3]'></div>
                         </div>
                         <div className='w-full flex flex-col gap-[24px]'>
                             <div className='flex w-full justify-between'>
                                 <div className='flex flex-col h-full justify-between'>
-                                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Frontend Engineer</span>
-                                    <span className='font-normal text-[16px] leading-[24px]'>San Francisco  Full-Time</span>
+                                    <span className='font-bold text-[16px] md:text-[20px] text-[#545454] uppercase'>Frontend Engineer</span>
+                                    <span className='font-normal text-[12px] md:text-[16px]'>San Francisco  Full-Time</span>
                                 </div>
-                                <div onClick={() => { router.push(`/${path.DETAIL_CAREER}`) }} className='cursor-pointer bg-[#F08921] rounded-lg w-[250px] h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
+                                <div onClick={() => { router.push(`/${path.DETAIL_CAREER}`) }} className='cursor-pointer bg-[#F08921] rounded-lg w-[120px] h-[36px] md:w-[160px] md:h-[48px] lg:w-[250px] lg:h-[56px] flex justify-center items-center text-white '>APPLY NOW</div>
                             </div>
                             <div className='w-full h-[1px] bg-[#D3D3D3]'></div>
                         </div>

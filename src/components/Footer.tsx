@@ -11,7 +11,7 @@ const Footer = () => {
 
     return (
         <div className='w-full h-fit bg-[#3B7ACC] flex justify-center items-center text-white'>
-            <div className='w-full sm:w-main flex flex-col gap-[40px] px-4 sm:px-0'>
+            <div className='w-full sm:w-main flex flex-col gap-[40px] py-4 px-4 sm:px-0 sm:py-8'>
                 <div className='flex flex-col sm:flex-row sm:gap-[22px] items-start sm:items-center'>
                     <img src="/assets/logo.png" className='w-[60px] h-[60px] hidden sm:block' alt="Logo" />
                     <div className='flex flex-wrap sm:gap-[22px] w-full sm:w-auto'>

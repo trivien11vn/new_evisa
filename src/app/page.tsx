@@ -233,14 +233,14 @@ const VisaHome = () => {
                 </div>
             </div>
 
-            <div className='w-main mt-[40px] mx-auto flex flex-col gap-[40px]'>
-                <span className='font-extrabold text-[40px] leading-[52px] underline'>TESTIMONIALS</span>
+            <div className='p-4 lg:p-0 w-full lg:w-main mt-[40px] mx-auto flex flex-col gap-[40px]'>
+                <span className='font-extrabold text-[28px] md:text-[32px] lg:text-[40px] underline'>TESTIMONIALS</span>
                 <div className='flex justify-center items-center relative'>
-                    <div className='w-[64px] h-[64px] rounded-full flex items-center justify-center text-white bg-[#3B7ACC] border border-[#3B7ACC] absolute left-[-90px] top-1/2 hover:bg-white hover:text-[#3B7ACC] cursor-pointer transition-all duration-300 ease-in-out'>
+                    <div className='w-[64px] h-[64px] rounded-full items-center justify-center text-white bg-[#3B7ACC] border border-[#3B7ACC] absolute left-[-90px] top-1/2 hover:bg-white hover:text-[#3B7ACC] cursor-pointer transition-all duration-300 ease-in-out hidden md:flex'>
                         <SlArrowLeft />
                     </div>
-                    <div className='w-main h-[588px] flex gap-[48px]'>
-                        <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-all transform hover:scale-105 duration-300 ease-in-out cursor-pointer'>
+                    <div className='w-main h-[588px] flex overflow-x-auto lg:flex-row gap-[48px]'>
+                        <div className='lg:w-[357px] lg:h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-all transform hover:scale-105 duration-300 ease-in-out cursor-pointer'>
                             <Image src="/assets/person1.jpg" alt="Person1" width={325} height={320} />
                             <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
                                 <div className='w-[325px] h-[52px] flex flex-col'>
@@ -260,7 +260,7 @@ const VisaHome = () => {
                             </div>
                         </div>
 
-                        <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-all transform hover:scale-105 duration-300 ease-in-out cursor-pointer'>
+                        <div className='lg:w-[357px] lg:h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-all transform hover:scale-105 duration-300 ease-in-out cursor-pointer'>
                             <Image src="/assets/person1.jpg" alt="Person1" width={325} height={320} />
                             <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
                                 <div className='w-[325px] h-[52px] flex flex-col'>
@@ -279,7 +279,7 @@ const VisaHome = () => {
                                 </span>
                             </div>
                         </div>
-                        <div className='w-[357px] h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-all transform hover:scale-105 duration-300 ease-in-out cursor-pointer'>
+                        <div className='lg:w-[357px] lg:h-[586px] border border-[#D3D3D3] shadow-md rounded-lg flex flex-col p-2 items-center transition-all transform hover:scale-105 duration-300 ease-in-out cursor-pointer'>
                             <Image src="/assets/person1.jpg" alt="Person1" width={325} height={320} />
                             <div className='w-[325px] h-[218px] flex flex-col gap-[16px]'>
                                 <div className='w-[325px] h-[52px] flex flex-col'>

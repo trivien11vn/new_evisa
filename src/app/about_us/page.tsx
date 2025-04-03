@@ -5,25 +5,25 @@ import { GoArrowUpRight } from 'react-icons/go'
 const AboutUs = () => {
     return (
         <div className='w-full my-[24px] flex flex-col gap-2 relative'>
-            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
-            <div className='w-main mx-auto flex flex-col gap-8'>
+            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden lg:flex'></div>
+            <div className='w-full lg:w-main p-4 lg:p-0 mx-auto flex flex-col gap-8'>
                 <div className='flex items-center'>
-                    <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>ABOUT US</div>
+                    <div className='w-[860px] font-extrabold text-[32px] md:text-[48px] lg:text-[56px]'>ABOUT US</div>
                 </div>
                 <div className='flex flex-col gap-[40px]'>
                     <div className='w-full flex items-center justify-between'>
                         <div className='flex flex-col gap-[24px] w-[600px]'>
-                            <span className='font-extrabold text-[40px] leading-[52px] text-[#545454] underline'>ELEVATING TRAVEL WITH EXPERTISE.</span>
-                            <span className='font-normal text-[20px] leading-6 text-[#272727]'>“We are dedicated to offer deliver truly unique and customized experiences  that elevate the travel experience. “</span>
+                            <span className='font-extrabold text-[28px] md:text-[32px] lg:text-[40px] text-[#545454] underline'>ELEVATING TRAVEL WITH EXPERTISE.</span>
+                            <span className='font-normal text-[16px] md:text-[20px] text-[#272727]'>“We are dedicated to offer deliver truly unique and customized experiences  that elevate the travel experience. “</span>
                         </div>
-                        <Image src={aboutUsImage} alt='about-us' width={420} height={532} />
+                        <Image src={aboutUsImage} alt='about-us' width={420} height={532} className='hidden lg:flex' />
                     </div>
                     <div className='flex flex-col gap-[40px]'>
-                        <span className='font-extrabold text-[40px] leading-[52px] text-[#272727] underline'>OUR DESIRABLE WORK</span>
+                        <span className='font-extrabold text-[28px] md:text-[32px] lg:text-[40px] text-[#272727] underline'>OUR DESIRABLE WORK</span>
                         <div className='flex flex-col gap-[40px] items-center'>
-                            <div className='flex gap-[40px] justify-between'>
-                                <div className='w-[30%] flex flex-col gap-8 p-4 items-center '>
-                                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>eVisa Services</span>
+                            <div className='flex w-full gap-[12px] lg:justify-between overflow-x-auto'>
+                                <div className='w-[50%] lg:w-[30%] flex flex-col gap-8 p-4 items-center '>
+                                    <span className='font-bold text-[16px] lg:text-[20px] line-clamp-1 text-[#545454] uppercase'>eVisa Services</span>
                                     <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="80" cy="80" r="79" fill="#F08921" stroke="#EFA969" strokeWidth="2" />
                                         <path d="M45.4336 55.3108C45.4336 48.0372 51.33 42.1407 58.6037 42.1407H81.6513L104.699 65.1884V94.821C104.699 102.095 98.8025 107.991 91.5288 107.991H58.6037C51.33 107.991 45.4336 102.095 45.4336 94.821V55.3108Z" fill="black" />
@@ -37,8 +37,8 @@ const AboutUs = () => {
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                     </span>
                                 </div>
-                                <div className='w-[30%] flex flex-col gap-8 p-4 items-center '>
-                                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Flight Booking Services</span>
+                                <div className='w-[50%] lg:w-[30%] flex flex-col gap-8 p-4 items-center '>
+                                    <span className='font-bold text-[16px] lg:text-[20px] line-clamp-1 text-[#545454] uppercase'>Flight Booking Services</span>
                                     <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="80" cy="80" r="79" fill="#F08921" stroke="#F08921" strokeWidth="2" />
                                         <path d="M97.1768 110.457L90.2591 101.053C89.2973 99.746 88.7841 98.2098 88.7841 96.6384V52.1158C88.7841 47.2654 84.8521 43.3334 80.0017 43.3334C75.1512 43.3334 71.2192 47.2654 71.2192 52.1158V96.6384C71.2192 98.2098 70.706 99.746 69.7442 101.053L62.8265 110.457C60.3287 113.853 64.4164 118.049 68.444 116.224L76.074 112.767C78.5465 111.647 81.4568 111.647 83.9293 112.767L91.5593 116.224C95.5869 118.049 99.6747 113.853 97.1768 110.457Z" fill="#272727" />
@@ -51,8 +51,8 @@ const AboutUs = () => {
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                     </span>
                                 </div>
-                                <div className='w-[30%] flex flex-col gap-8 p-4 items-center '>
-                                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Hotel Booking Services</span>
+                                <div className='w-[50%] lg:w-[30%] flex flex-col gap-8 p-4 items-center '>
+                                    <span className='font-bold text-[16px] lg:text-[20px] line-clamp-1 text-[#545454] uppercase'>Hotel Booking Services</span>
                                     <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="80" cy="80" r="79" fill="#F08921" stroke="#EFA969" strokeWidth="2" />
                                         <path d="M114.336 101.434V72.7736C114.336 68.3334 112.357 64.1282 108.946 61.3196L90.6131 46.2233C85.2142 41.7776 77.4577 41.7776 72.0588 46.2233L53.7254 61.3196C50.3146 64.1282 48.3359 68.3334 48.3359 72.7736V101.434C48.3359 109.601 54.9024 116.222 63.0026 116.222H99.6693C107.769 116.222 114.336 109.601 114.336 101.434Z" fill="#272727" stroke="#272727" strokeWidth="3" strokeLinejoin="round" />
@@ -63,9 +63,9 @@ const AboutUs = () => {
                                     </span>
                                 </div>
                             </div>
-                            <div className='flex gap-[40px] justify-center'>
-                                <div className='w-[30%] flex flex-col gap-8 p-4 items-center '>
-                                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Airport Services</span>
+                            <div className='flex w-full gap-[12px] justify-start lg:justify-center overflow-x-auto'>
+                                <div className='w-[50%] lg:w-[30%] flex flex-col gap-8 p-4 items-center '>
+                                    <span className='font-bold text-[16px] lg:text-[20px] line-clamp-1 text-[#545454] uppercase'>Airport Services</span>
                                     <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="80" cy="80" r="79" fill="#F08921" stroke="#EFA969" strokeWidth="2" />
                                         <g clipPath="url(#clip0_2673_44710)">
@@ -82,8 +82,8 @@ const AboutUs = () => {
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                     </span>
                                 </div>
-                                <div className='w-[30%] flex flex-col gap-8 p-4 items-center '>
-                                    <span className='font-bold text-[20px] leading-[26px] text-[#545454] uppercase'>Insurance Services</span>
+                                <div className='w-[50%] lg:w-[30%] flex flex-col gap-8 p-4 items-center '>
+                                    <span className='font-bold text-[16px] lg:text-[20px] line-clamp-1 text-[#545454] uppercase'>Insurance Services</span>
                                     <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="80" cy="80" r="79" fill="#F08921" stroke="#F08921" strokeWidth="2" />
                                         <path d="M77.9301 43.6109L48.9323 56.4989C47.4867 57.1414 46.5516 58.5838 46.573 60.1656C46.9807 90.3487 54.2604 100.398 77.4685 114.93C78.7423 115.727 80.3684 115.729 81.643 114.932C105.011 100.333 111.902 90.0365 112.517 60.1861C112.55 58.5934 111.613 57.137 110.157 56.4901L81.1792 43.6109C80.145 43.1513 78.9644 43.1513 77.9301 43.6109Z" fill="#272727" stroke="#28303F" strokeWidth="1.5" strokeLinejoin="round" />
@@ -96,52 +96,52 @@ const AboutUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='w-main mt-[40px] mx-auto flex flex-col gap-[40px]'>
-                        <span className='font-extrabold text-[40px] leading-[52px] underline'>WHY CHOOSE US?</span>
+                    <div className='w-full lg:w-main mt-[40px] mx-auto flex flex-col gap-[40px]'>
+                        <span className='font-extrabold text-[28px] md:text-[32px] lg:text-[40px] underline'>WHY CHOOSE US?</span>
                         <div className='w-full flex flex-col gap-[64px]'>
                             <div className='w-full flex flex-col gap-[80px]'>
-                                <div className='flex gap-[120px]'>
+                                <div className='flex flex-col lg:flex-row gap-[120px]'>
                                     <div className='flex-1 flex gap-[40px] items-center'>
-                                        <div className='min-w-[120px] h-[120px] flex justify-center items-center rounded-full border-2 border-[#EFA969]'>
+                                        <div className='min-w-[80px] h-[80px] lg:min-w-[120px] lg:h-[120px] flex justify-center items-center rounded-full border-2 border-[#EFA969]'>
                                             <svg width="43" height="50" viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21.5 0C27.3012 0 32 4.475 32 10C32 15.525 27.3012 20 21.5 20C15.6987 20 11 15.525 11 10C11 4.475 15.6987 0 21.5 0ZM32 26.35C32 29 31.265 35.175 26.2513 42.075L24.125 30L26.5925 25.3C24.965 25.125 23.2587 25 21.5 25C19.7412 25 18.035 25.125 16.4075 25.3L18.875 30L16.7487 42.075C11.735 35.175 11 29 11 26.35C4.72625 28.1 0.5 31.25 0.5 35V45H42.5V35C42.5 31.25 38.3 28.1 32 26.35Z" fill="#6295D6" />
                                             </svg>
                                         </div>
-                                        <div className='flex flex-col gap-[8px]'>
-                                            <span className='font-bold text-[20px] leading-[26px] uppercase'>Professional </span>
-                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                        <div className='flex flex-col gap-[8px] w-full'>
+                                            <span className='font-bold text-[16px] md:text-[20px] uppercase'>Professional </span>
+                                            <span className='text-[12px] md:text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                                             <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
                                         </div>
                                     </div>
                                     <div className='flex-1 flex gap-[40px] items-center'>
-                                        <div className='min-w-[120px] h-[120px] flex justify-center items-center rounded-full border-2 border-[#EFA969]'>
+                                        <div className='min-w-[80px] h-[80px] lg:min-w-[120px] lg:h-[120px] flex justify-center items-center rounded-full border-2 border-[#EFA969]'>
                                             <svg width="41" height="35" viewBox="0 0 41 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M18 0.5H40.5V22.3571H35.9297L25.832 5.35714L23.8203 8.7154C23.1042 7.64025 22.2513 6.67894 21.2617 5.83147C20.2721 4.984 19.1849 4.27567 18 3.70647V0.5ZM22.0039 11.7891L12.8633 27.1574C12.4857 27.1953 12.1146 27.2143 11.75 27.2143C10.2005 27.2143 8.74219 26.9297 7.375 26.3605C6.00781 25.7913 4.81641 25.0071 3.80078 24.0078C2.78516 23.0086 1.98438 21.8512 1.39844 20.5357C0.8125 19.2202 0.513021 17.8036 0.5 16.2857C0.5 14.7805 0.792969 13.3638 1.37891 12.0357C1.96484 10.7076 2.77214 9.55022 3.80078 8.56362C4.82943 7.57701 6.02083 6.79911 7.375 6.22991C8.72917 5.66071 10.1875 5.36979 11.75 5.35714C12.8568 5.35714 13.9245 5.50893 14.9531 5.8125C15.9818 6.11607 16.9453 6.54613 17.8438 7.10268C18.7422 7.65923 19.543 8.32961 20.2461 9.11384C20.9492 9.89807 21.5352 10.7898 22.0039 11.7891ZM12.1211 34.5L25.832 11.4286L39.543 34.5H12.1211Z" fill="#6295D6" />
                                             </svg>
                                         </div>
                                         <div className='flex flex-col gap-[8px]'>
-                                            <span className='font-bold text-[20px] leading-[26px] uppercase'>Diverse</span>
-                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                            <span className='font-bold text-[16px] md:text-[20px] uppercase'>Diverse</span>
+                                            <span className='text-[12px] md:text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                                             <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex gap-[120px]'>
+                                <div className='flex flex-col lg:flex-row gap-[120px]'>
                                     <div className='flex-1 flex gap-[40px] items-center'>
-                                        <div className='min-w-[120px] h-[120px] flex justify-center items-center rounded-full border-2 border-[#EFA969]'>
+                                        <div className='min-w-[80px] h-[80px] lg:min-w-[120px] lg:h-[120px] flex justify-center items-center rounded-full border-2 border-[#EFA969]'>
                                             <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path opacity="0.4" d="M28.1694 7.75894L14.8418 13.6823C10.9869 15.3956 8.44288 19.2325 8.68818 23.444C9.6472 39.9086 14.4687 47.1569 26.997 55.6388C30.3159 57.8857 34.6907 57.8912 38.0072 55.6406C50.5741 47.1126 55.223 39.7618 56.2663 23.501C56.5383 19.2617 53.9902 15.3841 50.1083 13.6588L36.8337 7.75894C34.0756 6.53315 30.9274 6.53315 28.1694 7.75894Z" fill="#6295D6" />
                                                 <path fillRule="evenodd" clipRule="evenodd" d="M41.8171 25.6616C42.6484 26.389 42.7326 27.6525 42.0052 28.4838L34.3521 37.2302C32.7076 39.1096 29.875 39.3613 27.9249 37.8012L23.2507 34.0618C22.3882 33.3718 22.2483 32.1132 22.9383 31.2507C23.6284 30.3882 24.8869 30.2484 25.7495 30.9384L30.4237 34.6777C30.7022 34.9006 31.1069 34.8646 31.3418 34.5961L38.9949 25.8498C39.7223 25.0185 40.9858 24.9343 41.8171 25.6616Z" fill="#6295D6" />
                                             </svg>
                                         </div>
                                         <div className='flex flex-col gap-[8px]'>
-                                            <span className='font-bold text-[20px] leading-[26px] uppercase'>Reliable </span>
-                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                            <span className='font-bold text-[16px] md:text-[20px] uppercase'>Reliable </span>
+                                            <span className='text-[12px] md:text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                                             <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
                                         </div>
                                     </div>
                                     <div className='flex-1 flex gap-[40px] items-center'>
-                                        <div className='min-w-[120px] h-[120px] flex justify-center items-center rounded-full border-2 border-[#EFA969]'>
+                                        <div className='min-w-[80px] h-[80px] lg:min-w-[120px] lg:h-[120px] flex justify-center items-center rounded-full border-2 border-[#EFA969]'>
                                             <svg width="43" height="51" viewBox="0 0 43 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fillRule="evenodd" clipRule="evenodd" d="M12.8359 13.1667C12.8359 8.3802 16.7161 4.5 21.5026 4.5C26.2891 4.5 30.1693 8.3802 30.1693 13.1667L32.1693 13.1667C32.8529 13.1667 33.5214 13.231 34.1693 13.3539V13.1667C34.1693 6.17106 28.4982 0.5 21.5026 0.5C14.507 0.5 8.83594 6.17106 8.83594 13.1667V13.3539C9.48377 13.231 10.1523 13.1667 10.8359 13.1667L12.8359 13.1667Z" fill="#3B7ACC" />
                                                 <path opacity="0.4" d="M0.167969 23.8334C0.167969 17.9424 4.9436 13.1667 10.8346 13.1667H32.168C38.059 13.1667 42.8346 17.9424 42.8346 23.8334V39.8334C42.8346 45.7245 38.059 50.5001 32.168 50.5001H10.8346C4.9436 50.5001 0.167969 45.7245 0.167969 39.8334V23.8334Z" fill="#3B7ACC" />
@@ -149,14 +149,14 @@ const AboutUs = () => {
                                             </svg>
                                         </div>
                                         <div className='flex flex-col gap-[8px]'>
-                                            <span className='font-bold text-[20px] leading-[26px] uppercase'>Safe </span>
-                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                            <span className='font-bold text-[16px] md:text-[20px] uppercase'>Safe </span>
+                                            <span className='text-[12px] md:text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                                             <div className='w-[64px] h-[8px] bg-[#F08921]'></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-[300px] h-[56px] flex bg-[#F08921] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
+                            <div className='w-full py-2 lg:w-[300px] lg:h-[56px] lg:py-0 flex bg-[#F08921] rounded-md mx-auto text-white items-center justify-center gap-[22px]'>
                                 <span className='uppercase text-[16px] font-bold leading-[24px]'>GET STARTED</span>
                                 <GoArrowUpRight />
                             </div>
