@@ -69,7 +69,7 @@ const VisaHome = () => {
     }
     return (
         <div className='my-[24px] full relative w-full'>
-            <div className='h-[240px] hidden lg:flex items-center absolute left-0'>
+            <div className='h-[240px] hidden xl:flex items-center absolute left-0'>
                 <div className='w-[80px] h-[20px] my-auto bg-[#F08921]'></div>
             </div>
             <div className='w-full p-4 lg:p-0 lg:w-main mx-auto flex flex-col lg:flex-row justify-between'>

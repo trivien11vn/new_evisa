@@ -18,12 +18,12 @@ const ChoosingPaymentMethod = () => {
     const [confirm2, setConfirm2] = useState(true)
     return (
         <div className='w-full my-[24px] flex flex-col gap-2 relative'>
-            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
-            <div className='w-main h-[200px] mx-auto flex flex-col gap-2'>
+            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden xl:flex'></div>
+            <div className='w-full lg:w-main p-4 lg:p-0 h-[200px] mx-auto flex flex-col gap-2'>
                 <div className='flex justify-between items-center'>
-                    <div className='w-[860px] font-extrabold text-[56px] leading-[64px]'>GLOBAL EVISA PAYMENT METHOD</div>
+                    <div className='w-[860px] font-extrabold text-[32px] md:text-[48px] lg:text-[56px]'>GLOBAL EVISA PAYMENT METHOD</div>
                     <div className='w-[210px] h-[61px] flex items-center justify-center bg-[#3B7ACC] text-white rounded-2xl'>
-                        <span className='font-normal text-[16px]'>Save & Exit</span>
+                        <span className='font-normal text-[12px] lg:text-[16px]'>Save & Exit</span>
                     </div>
                 </div>
                 <div className='w-full flex justify-between relative'>
@@ -31,25 +31,25 @@ const ChoosingPaymentMethod = () => {
                         <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center border border-[#D3D3D3] bg-[#D3D3D3] z-50'>
                             <span className='font-extrabold text-[28px] leading-[36px] text-white'>1</span>
                         </div>
-                        <span className='font-thin text-[24px] leading-[36px] text-[#000000]'>Order Information</span>
+                        <span className='font-thin text-[16px] lg:text-[24px] text-[#000000]'>Order Information</span>
                     </div>
                     <div className='w-[320px] h-[147px] flex flex-col gap-4 items-center'>
                         <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center border bg-[#F08921] z-50'>
                             <span className='font-extrabold text-[28px] leading-[36px] text-white'>2</span>
                         </div>
-                        <span className='font-bold text-[24px] leading-[36px]'>Payment</span>
+                        <span className='font-bold text-[16px] lg:text-[24px] leading-[36px]'>Payment</span>
                     </div>
                     <div className='w-[320px] h-[147px] flex flex-col gap-4 items-center'>
                         <div className='w-[80px] h-[80px] rounded-full flex items-center justify-center border border-[#F08921] bg-white z-50'>
                             <span className='font-extrabold text-[28px] leading-[36px] text-[#F08921]'>3</span>
                         </div>
-                        <span className='font-medium text-[24px] leading-[36px]'>Confirmation</span>
+                        <span className='font-medium text-[16px] lg:text-[24px] leading-[36px]'>Confirmation</span>
                     </div>
-                    <div className='w-[841px] h-[2px] absolute top-[40px] left-[170px] bg-[#D3D3D3]'></div>
+                    <div className='w-[841px] h-[2px] absolute top-[40px] left-[170px] bg-[#D3D3D3] hidden lg:flex'></div>
                 </div>
             </div>
 
-            <div className='w-main mx-auto mt-[100px] flex flex-col gap-4'>
+            <div className='w-full lg:w-main p-4 lg:p-0 mx-auto mt-[100px] flex flex-col gap-4'>
                 <span className='font-extrabold text-[24px] leading-[32px]'>{`CUSTOMER'S ORDER REVIEW`}</span>
                 <div className='flex flex-col gap-[20px]'>
                     <div className='w-full h-[64px] border border-[#3B7ACC] rounded-md p-4 flex justify-between'>
@@ -82,12 +82,12 @@ const ChoosingPaymentMethod = () => {
                 </div>
             </div>
 
-            <div className='flex justify-between w-main mx-auto mt-[100px]'>
-                <div className='flex flex-col w-[690px] gap-[40px]'>
-                    <div className='w-[690px] h-[336px] border border-dashed border-[#DA857F] rounded p-8 bg-[#FFFCF7]'>
+            <div className='flex flex-col gap-[12px] lg:flex-row lg:justify-between w-full lg:w-main p-4 lg:p-0 mx-auto mt-[100px]'>
+                <div className='flex flex-col w-full lg:w-[690px] gap-[40px]'>
+                    <div className='lg:w-[690px] lg:h-[336px] border border-dashed border-[#DA857F] rounded p-8 bg-[#FFFCF7]'>
                         <div className='w-full h-full flex flex-col gap-[24px]'>
                             <span className='font-extrabold text-[24px] leading-[32px]'>Payment Methods</span>
-                            <div className='flex gap-[24px]'>
+                            <div className='flex overflow-x-auto gap-[24px]'>
                                 <div className='flex gap-[8px] cursor-pointer' onClick={() => { setMethodPayment('bank') }}>
                                     {
                                         methodPayment !== 'bank'
@@ -288,8 +288,8 @@ const ChoosingPaymentMethod = () => {
                     </div>
                     {
                         methodPayment === 'bank' &&
-                        <div className='w-[690px] h-[650px] p-4 border border-dashed border-[#DA857F] rouded bg-[#FFFCF7]'>
-                            <div className='w-[650px] h-[596px] flex flex-col gap-[20px]'>
+                        <div className='w-full lg:w-[690px] lg:h-[650px] p-4 border border-dashed border-[#DA857F] rouded bg-[#FFFCF7]'>
+                            <div className='lg:w-[650px] lg:h-[596px] flex flex-col gap-[20px]'>
                                 <span className='font-extrabold text-[24px] leading-[32px]'>PAYMENT METHOD - BANK TRANSFER</span>
                                 <div className='flex gap-[45px] h-full'>
                                     <div className='w-[45%] flex flex-col gap-[16px]'>
@@ -298,23 +298,23 @@ const ChoosingPaymentMethod = () => {
                                             <span className='font-bold text-[18px] leading-6 underline'>Bank (USD)</span>
                                         </div>
                                         <div className='flex flex-col gap-[16px]'>
-                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] w-[280px] h-[72px]'>
+                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] lg:w-[280px] lg:h-[72px]'>
                                                 <span>Account Name</span>
                                                 <span className='font-montserrat font-bold text-[16px] leading-[24px]'>CONG TY TNHH THE ONE DIGI</span>
                                             </div>
-                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] w-[280px] h-[72px]'>
+                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] lg:w-[280px] lg:h-[72px]'>
                                                 <span>Account Number</span>
                                                 <span className='font-montserrat font-bold text-[16px] leading-[24px] text-[#FF3B30]'>116002939886</span>
                                             </div>
-                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] w-[280px] h-[72px]'>
+                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] lg:w-[280px] lg:h-[72px]'>
                                                 <span>Bank Name</span>
                                                 <span className='font-montserrat font-bold text-[16px] leading-[24px]'>VietinBank</span>
                                             </div>
-                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] w-[280px] h-[72px]'>
+                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] lg:w-[280px] lg:h-[72px]'>
                                                 <span>Swift Code</span>
                                                 <span className='font-montserrat font-bold text-[16px] leading-[24px]'>ICBVVNVX900</span>
                                             </div>
-                                            <div className='flex flex-col gap-[4px] w-[280px] h-[72px]'>
+                                            <div className='flex flex-col gap-[4px] lg:w-[280px] lg:h-[72px]'>
                                                 <span>Content</span>
                                                 <span className='font-montserrat font-bold text-[16px] leading-[24px]'>Code - Order ID</span>
                                             </div>
@@ -327,19 +327,19 @@ const ChoosingPaymentMethod = () => {
                                             <span className='font-bold text-[18px] leading-6 underline'>Bank (VND)</span>
                                         </div>
                                         <div className='flex flex-col gap-[16px]'>
-                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] w-[280px] h-[72px]'>
+                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] lg:w-[280px] lg:h-[72px]'>
                                                 <span>Account Name</span>
                                                 <span className='font-montserrat font-bold text-[16px] leading-[24px]'>CONG TY TNHH THE ONE DIGI</span>
                                             </div>
-                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] w-[280px] h-[72px]'>
+                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] lg:w-[280px] lg:h-[72px]'>
                                                 <span>Account Number</span>
                                                 <span className='font-montserrat font-bold text-[16px] leading-[24px] text-[#0F5BED]'>116002939886</span>
                                             </div>
-                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] w-[280px] h-[72px]'>
+                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] lg:w-[280px] lg:h-[72px]'>
                                                 <span>Bank Name</span>
                                                 <span className='font-montserrat font-bold text-[16px] leading-[24px]'>VietinBank</span>
                                             </div>
-                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] w-[280px] h-[72px]'>
+                                            <div className='flex flex-col gap-[4px] border-b border-[#D3D3D3] lg:w-[280px] lg:h-[72px]'>
                                                 <span>Content</span>
                                                 <span className='font-montserrat font-bold text-[16px] leading-[24px]'>Code - Order ID</span>
                                             </div>
@@ -379,12 +379,12 @@ const ChoosingPaymentMethod = () => {
                         </div>
                     </div>
 
-                    <div onClick={() => { router.push(`/${path.CONFIRM_SUCCESS_TRANSFER}`) }} className='cursor-pointer w-[400px] h-[48px] bg-[#3B7ACC] rounded-lg mx-auto text-white flex items-center justify-center'>
-                        <div className='font-bold text-[20px] leading-[72px]'>Proceed to Payment</div>
+                    <div onClick={() => { router.push(`/${path.CONFIRM_SUCCESS_TRANSFER}`) }} className='cursor-pointer lg:w-[400px] lg:h-[48px] bg-[#3B7ACC] rounded-lg mx-auto text-white flex items-center justify-center px-4 py-2 lg:p-0'>
+                        <div className='font-bold text-[20px]'>Proceed to Payment</div>
                     </div>
                 </div>
                 <div className='flex flex-col gap-[24px] '>
-                    <div className='w-[440px] h-[880px] bg-[#FFFCF7] border border-dashed border-[#DA857F] rounded p-8 flex flex-col items-center gap-[24px]'>
+                    <div className='w-full lg:w-[440px] lg:h-[880px] bg-[#FFFCF7] border border-dashed border-[#DA857F] rounded p-8 flex flex-col items-center gap-[24px]'>
                         <span className='text-black font-extrabold text-[24px] leading-[32px]'>ORDER SUMMARY</span>
                         <div className='flex justify-between w-full'>
                             <span className='font-semibold text-[16px] leading-[24px]'>Order Number: </span>
@@ -429,7 +429,7 @@ const ChoosingPaymentMethod = () => {
                             <span className='font-semibold text-[16px] leading-[24px]'>Travel Insurance: </span>
                             <span>50 USD per person</span>
                         </div>
-                        <div className='w-[360px] h-[48px] flex rounded-lg border border-[#D3D3D3]'>
+                        <div className='lg:w-[360px] lg:h-[48px] flex rounded-lg border border-[#D3D3D3]'>
                             <div className='flex-1 flex items-center justify-center bg-white rounded-l-lg'>
                                 <input placeholder='Enter your promote code here' className='outline-none' />
                             </div>

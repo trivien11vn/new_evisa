@@ -18,7 +18,7 @@ const PaymentPage = () => {
 
     return (
         <div className='w-full my-[24px] flex flex-col gap-2 relative font-montserrat'>
-            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
+            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden xl:flex'></div>
             <div className='w-main h-[200px] mx-auto flex flex-col gap-2'>
                 <div className='flex justify-center items-center'>
                     <span className='font-extrabold text-[56px] leading-[64px]'>PAYMENT</span>

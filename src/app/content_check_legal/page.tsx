@@ -6,7 +6,7 @@ const ContentCheckLegal = () => {
     const [status, setStatus] = useState('')
     return (
         <div className='w-full my-[24px] flex flex-col gap-[40px] relative'>
-            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden lg:flex'></div>
+            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden xl:flex'></div>
             <div className='w-full lg:w-main p-4 lg:p-0 mx-auto'>
                 <div className='w-full font-extrabold text-[32px] md:text-[48px] lg:text-[56px]'>ELECTRONIC TRAVEL AUTHORIZATION: ABOUT THE PROCESS</div>
             </div>
@@ -36,7 +36,7 @@ const ContentCheckLegal = () => {
                         <span>You are allowed to visit this country</span>
                     </div>
                     <div className='px-8 py-4 flex flex-col gap-[24px]'>
-                        <div className='w-full  mx-auto my-[12px] px-[20px] py-[12px] rounded-2xl border border-[#EFA969] bg-[#FFFCF7] flex gap-[25px] items-center'>
+                        <div className='w-full mx-auto my-[12px] px-[20px] py-[12px] rounded-2xl border border-[#EFA969] bg-[#FFFCF7] flex gap-[25px] items-center'>
                             <svg className='w-[40px] h-[40px] ' viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M36.6666 20.5002C36.6666 29.7049 29.2047 37.1668 20 37.1668C10.7952 37.1668 3.33331 29.7049 3.33331 20.5002C3.33331 11.2954 10.7952 3.8335 20 3.8335C29.2047 3.8335 36.6666 11.2954 36.6666 20.5002Z" fill="#EFA969" />
                                 <path d="M20 13.8335V15.5002M20 19.6668V27.1668M20 37.1668C29.2047 37.1668 36.6666 29.7049 36.6666 20.5002C36.6666 11.2954 29.2047 3.8335 20 3.8335C10.7952 3.8335 3.33331 11.2954 3.33331 20.5002C3.33331 29.7049 10.7952 37.1668 20 37.1668Z" stroke="#EFA969" strokeLinecap="round" strokeLinejoin="round" />

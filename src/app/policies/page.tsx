@@ -1,7 +1,7 @@
 const Policies = () => {
     return (
         <div className='w-full my-[24px] flex flex-col gap-8 relative'>
-            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden lg:flex'></div>
+            <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden xl:flex'></div>
             <div className='w-full lg:w-main p-4 lg:p-0 mx-auto flex flex-col gap-8'>
                 <div className='flex items-center'>
                     <div className='w-[860px] font-extrabold text-[32px] md:text-[48px] lg:text-[56px]'>POLICIES</div>
