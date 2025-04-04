@@ -42,11 +42,12 @@ const CountryDetail = () => {
     const showSelectTravelRef = useRef<HTMLDivElement | null>(null)
     const showSelectPurposeRef = useRef<HTMLDivElement | null>(null)
 
-    const handleClickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
-        if (showSelectRef.current && !showSelectRef.current.contains(event.target)) {
-            setShowSelectCountry(false); // Ẩn SelectCountry khi click ra ngoài
+    const handleClickOutside = (event: MouseEvent) => {
+        if (showSelectRef.current && !showSelectRef.current.contains(event.target as Node)) {
+            setShowSelectCountry(false);
         }
     };
+
 
     // Đăng ký và hủy bỏ sự kiện khi component được mount/unmount
     useEffect(() => {
@@ -58,9 +59,9 @@ const CountryDetail = () => {
         };
     }, []);
 
-    const handleClickOutsideTravel = (event) => {
-        if (showSelectTravelRef.current && !showSelectTravelRef.current.contains(event.target)) {
-            setShowSelectTravel(false); // Ẩn SelectCountry khi click ra ngoài
+    const handleClickOutsideTravel = (event: MouseEvent) => {
+        if (showSelectTravelRef.current && !showSelectTravelRef.current.contains(event.target as Node)) {
+            setShowSelectTravel(false);
         }
     };
 
@@ -74,9 +75,9 @@ const CountryDetail = () => {
     }, []);
 
 
-    const handleClickOutsidePurpose = (event) => {
-        if (showSelectPurposeRef.current && !showSelectPurposeRef.current.contains(event.target)) {
-            setShowSelectPurpose(false); // Ẩn SelectCountry khi click ra ngoài
+    const handleClickOutsidePurpose = (event: MouseEvent) => {
+        if (showSelectPurposeRef.current && !showSelectPurposeRef.current.contains(event.target as Node)) {
+            setShowSelectPurpose(false);
         }
     };
 
@@ -446,7 +447,7 @@ const CountryDetail = () => {
                 </div>
                 <div className='flex flex-col gap-[16px]' id="top-sites">
                     <span className='font-extrabold text-[28px] md:text-[32px] lg:text-[40px] text-[#545454] underline'>TOP VISITING SITES AND MUST-TRY THINGS IN JAPAN</span>
-                    <div className='text-sm md:text-md lg:text-lg'> 
+                    <div className='text-sm md:text-md lg:text-lg'>
                         Lum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. :<br /><br />
                         + Lorem Ipsum Dolor: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /><br />
                         + Lorem Ipsum Dolor: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />
