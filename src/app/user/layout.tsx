@@ -10,18 +10,20 @@ const UserLayout = ({
 }>) => {
     const router = useRouter()
     return (
-        <div className='w-main mx-auto my-[24px] flex flex-col gap-[40px]'>
+        <div className='w-full p-4 xl:p-0 xl:w-main mx-auto my-[24px] flex flex-col gap-[40px]'>
             <div className='flex justify-between items-center'>
                 <span className='font-extrabold text-[34px] leading-[40px]'>MY ACCOUNT</span>
                 <span className='font-normal text-[16px] leading-[20px]'>Home/ My Account</span>
             </div>
-            <div className='flex gap-[20px] w-full'>
-                <div className='w-[30%] border border-[#D3D3D3] flex flex-col h-fit'>
-                    <div className='px-4 py-10 flex gap-[32px] items-center'>
-                        <img className='w-[105px] h-[105px] rounded-full' src={person} />
+            <div className='flex flex-col sm:flex-row gap-[20px] w-full'>
+                <div className='w-full sm:w-[30%] border border-[#D3D3D3] flex flex-col h-fit'>
+                    <div className='px-4 py-10 flex gap-[12px] sm:gap-[16px] md:gap-[24px] lg:gap-[32px] items-center'>
+                        <img className='w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[105px] lg:h-[105px] rounded-full' src={person} />
                         <div className='flex flex-col gap-[4px]'>
-                            <span className='font-extrabold text-[24px] leading-[32px]'>LOREM IPSUM</span>
-                            <span className='font-normal text-[16px] leading-[24px]'>Loremipsum@gmail.com</span>
+                            <span className='font-extrabold text-[16px] md:text-[20px] lg:text-[24px]'>LOREM IPSUM</span>
+                            <span className='font-normal text-[12px] lg:text-[16px] w-full break-all'>
+                                Loremipsum@gmail.com
+                            </span>
                         </div>
                     </div>
                     <div className='p-4 bg-[#6295D6]'>
