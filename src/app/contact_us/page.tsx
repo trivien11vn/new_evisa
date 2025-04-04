@@ -24,7 +24,7 @@ const ContactUs = () => {
                     <div className='w-full lg:w-1/2 flex flex-col gap-6 md:gap-8'>
                         <div className='flex flex-col gap-4 md:gap-6'>
                             <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold underline'>
-                                LET'S TALK
+                                {`LET'S TALK`}
                             </h2>
                             <p className='text-base md:text-lg text-gray-700'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
