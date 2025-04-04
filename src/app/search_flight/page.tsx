@@ -31,7 +31,7 @@ const SearchFlight = () => {
         if (isDragging) {
             const slider = sliderRef.current;
             if (!slider) return;
-    
+
             const rect = slider.getBoundingClientRect();
             const offsetX = event.clientX - rect.left;
             const newValue = Math.min(Math.max(0, (offsetX / rect.width) * 100), 100);
@@ -50,8 +50,8 @@ const SearchFlight = () => {
     const handleMouseMove1 = (event: React.MouseEvent<HTMLDivElement>) => {
         if (isDragging1) {
             const slider = sliderRef1.current;
-            if(!slider) return;
-            
+            if (!slider) return;
+
             const rect = slider.getBoundingClientRect();
             const offsetX = event.clientX - rect.left;
             const newValue = Math.min(Math.max(0, (offsetX / rect.width) * 100), 100);
@@ -68,42 +68,41 @@ const SearchFlight = () => {
     };
     return (
         <div className='w-full my-[24px] flex flex-col gap-8 relative'>
-            <div className='w-main mx-auto flex flex-col gap-8'>
+            <div className='w-full p-4 xl:w-main xl:p-0 mx-auto flex flex-col gap-8'>
                 <div className='flex items-end'>
-                    <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0'></div>
-                    <span className='font-extrabold text-[56px] leading-[64px]'>SEARCH YOUR FLIGHT!</span>
+                    <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden xl:flex'></div>
+                    <span className='font-extrabold text-[32px] md:text-[48px] lg:text-[56px]'>SEARCH YOUR FLIGHT!</span>
                 </div>
                 <div className="w-full bg-[#3B7ACC] flex flex-col items-center gap-8 px-16 py-8">
                     {/* Tab Selection */}
-                    <div className="flex gap-16 items-center">
-                        <button className="bg-[#F08921] border-2 border-white rounded-xl px-6 py-3 text-white text-lg font-bold">
+                    <div className="flex gap-[12px] lg:gap-16 items-center">
+                        <button className="bg-[#F08921] border-2 border-white rounded-xl px-6 py-3 text-white text-sm md:text-md lg:text-lg font-bold">
                             One-way/ Round Trip
                         </button>
-                        <button className="bg-white border-2 border-white rounded-xl px-16 py-3 text-[#272727] text-lg font-normal">
+                        <button className="bg-white border-2 border-white rounded-xl px-6 py-3 lg:px-16 lg:py-3 text-[#272727] text-sm md:text-md lg:text-lg font-normal">
                             Multi-city
                         </button>
                     </div>
 
                     {/* Search Form */}
-                    <div className="w-full flex justify-between relative">
+                    <div className="w-full flex flex-col lg:flex-row gap-[12px] lg:justify-between relative">
                         {/* Location Inputs */}
-                        <div className="w-[24%]">
+                        <div className="w-full lg:w-[24%]">
                             <InputField titleColor='#fff' title={'Location 1'} />
                         </div>
-                        <div className='border border-[#FFFCF7] absolute top-[60%] left-[23%] transform -translate-y-1/2 cursor-pointer bg-[#F08921] flex items-center justify-center p-2 rounded-md'>
+                        <div className='hidden lg:flex border border-[#FFFCF7] absolute top-[60%] left-[23%] transform -translate-y-1/2 cursor-pointer bg-[#F08921] items-center justify-center p-2 rounded-md'>
                             <FaExchangeAlt className="text-white" />
                         </div>
-
-                        <div className="w-[24%]">
+                        <div className="w-full lg:w-[24%]">
                             <InputField titleColor='#fff' title={'Location 2'} />
                         </div>
 
                         {/* Date Inputs */}
-                        <div className='w-[24%]'>
+                        <div className='w-full lg:w-[24%]'>
                             <InputField titleColor='#fff' title={'Date of Departure'} placeholder='DD/MM/YYYY' />
                         </div>
 
-                        <div className='w-[24%]'>
+                        <div className='w-full lg:w-[24%]'>
                             <InputField titleColor='#fff' title={'Round-trip'} placeholder='DD/MM/YYYY' checkbox />
                         </div>
                     </div>
@@ -118,42 +117,42 @@ const SearchFlight = () => {
                     </div>
                 </div>
                 <div className='w-full flex justify-between items-center'>
-                    <div className='w-[18%] py-2 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[90%]'>
-                        <span className='font-semibold text-[16px] leading-[22px]'>26th - 27th Sep 2023</span>
-                        <span className='font-light text-[12px] leading-[22px]'>From 000,000,000 Currency</span>
+                    <div className='w-[18%] py-2 px-2 lg:px-0 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[90%]'>
+                        <span className='font-semibold text-[10px] md:text-[12px] lg:text-[16px]'>26th - 27th Sep 2023</span>
+                        <span className='font-light text-[8px] md:text-[10px] lg:text-[12px]'>From 000,000,000 Currency</span>
                     </div>
-                    <div className='w-[18%] py-2 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[90%]'>
-                        <span className='font-semibold text-[16px] leading-[22px]'>26th - 27th Sep 2023</span>
-                        <span className='font-light text-[12px] leading-[22px]'>From 000,000,000 Currency</span>
+                    <div className='w-[18%] py-2 px-2 lg:px-0 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[90%]'>
+                        <span className='font-semibold text-[10px] md:text-[12px] lg:text-[16px]'>26th - 27th Sep 2023</span>
+                        <span className='font-light text-[8px] md:text-[10px] lg:text-[12px]'>From 000,000,000 Currency</span>
                     </div>
-                    <div className='w-[18%] py-2 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[130%] shadow-xl shadow-blue-300'>
-                        <span className='font-semibold text-[16px] leading-[22px]'>26th - 27th Sep 2023</span>
-                        <span className='font-light text-[12px] leading-[22px]'>From 000,000,000 Currency</span>
+                    <div className='w-[18%] py-2 px-2 lg:px-0 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[130%] shadow-xl shadow-blue-300'>
+                        <span className='font-semibold text-[10px] md:text-[12px] lg:text-[16px]'>26th - 27th Sep 2023</span>
+                        <span className='font-light text-[8px] md:text-[10px] lg:text-[12px]'>From 000,000,000 Currency</span>
                     </div>
-                    <div className='w-[18%] py-2 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[90%]'>
-                        <span className='font-semibold text-[16px] leading-[22px]'>26th - 27th Sep 2023</span>
-                        <span className='font-light text-[12px] leading-[22px]'>From 000,000,000 Currency</span>
+                    <div className='w-[18%] py-2 px-2 lg:px-0 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[90%]'>
+                        <span className='font-semibold text-[10px] md:text-[12px] lg:text-[16px]'>26th - 27th Sep 2023</span>
+                        <span className='font-light text-[8px] md:text-[10px] lg:text-[12px]'>From 000,000,000 Currency</span>
                     </div>
-                    <div className='w-[18%] py-2 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[90%]'>
-                        <span className='font-semibold text-[16px] leading-[22px]'>26th - 27th Sep 2023</span>
-                        <span className='font-light text-[12px] leading-[22px]'>From 000,000,000 Currency</span>
+                    <div className='w-[18%] py-2 px-2 lg:px-0 border border-[#3B7ACC] rounded-2xl flex flex-col gap-2 items-center justify-center h-[90%]'>
+                        <span className='font-semibold text-[10px] md:text-[12px] lg:text-[16px]'>26th - 27th Sep 2023</span>
+                        <span className='font-light text-[8px] md:text-[10px] lg:text-[12px]'>From 000,000,000 Currency</span>
                     </div>
                 </div>
                 <div className='flex justify-between w-full'>
                     <div className='w-[25%] flex flex-col gap-8'>
-                        <div className='flex flex-col items-center rounded-xl border border-[#A9A9A9] relative gap-[16px] p-4'>
-                            <div className='w-[60px] h-[8px] absolute top-[45px] left-0 bg-[#F08921]'></div>
-                            <span className='w-1/4 font-extrabold text-[28px] leading-[36px]'>YOUR FLIGHT</span>
-                            <div onClick={() => setOpen1(true)} className='cursor-pointer w-full border border-[#6295D6] rounded-xl p-4 flex flex-wrap gap-4'>
-                                <div className='w-[40px] h-[40px] rounded-full bg-[#3B7ACC] text-white flex items-center justify-center'>
-                                    <span className='font-bold text-[20px] leading-[40px]'>1</span>
+                        <div className='flex flex-col items-center rounded-xl border border-[#A9A9A9] relative gap-[16px] p-1 md:p-2 lg:p-4'>
+                            <div className='hidden lg:flex lg:w-[60px] lg:h-[8px] md:w-[40px] md:h-[6px] absolute top-[45px] left-0 bg-[#F08921]'></div>
+                            <span className='text-center w-full lg:w-1/4 font-extrabold text-[12px] md:text-[20px] lg:text-[28px]'>YOUR FLIGHT</span>
+                            <div onClick={() => setOpen1(true)} className='cursor-pointer w-full border border-[#6295D6] rounded-xl p-1 md:p-2 lg:p-4 flex flex-wrap gap-1 md:gap-2 lg:gap-4'>
+                                <div className='w-[20px] h-[20px] md:w-[28px] md:h-[28px] lg:w-[40px] lg:h-[40px] rounded-full bg-[#3B7ACC] text-white flex items-center justify-center'>
+                                    <span className='font-bold text-[12px] md:text-[16px] ld:text-[20px]'>1</span>
                                 </div>
-                                <div className='flex flex-col gap-2 justify-start'>
-                                    <span className='text-[#2F62A3] font-bold text-[14px] leading-[32px]'>Wed, 06 Dec, 2023</span>
+                                <div className='w-full flex flex-col gap-2 justify-start'>
+                                    <span className='text-[#2F62A3] font-bold text-[8px] md:text-[10px] lg:text-[14px]'>Wed, 06 Dec, 2023</span>
                                     <div className='flex gap-1 items-center font-montserrat'>
-                                        <span className='font-bold text-[14px] leading-[22px]'>TP HCM</span>
+                                        <span className='font-bold text-[8px] md:text-[10px] lg:text-[14px]'>TP HCM</span>
                                         <FaLongArrowAltRight />
-                                        <span className='font-bold text-[14px] leading-[22px]'>Singapore</span>
+                                        <span className='font-bold text-[8px] md:text-[10px] lg:text-[14px]'>Singapore</span>
                                     </div>
                                 </div>
                                 {
@@ -192,16 +191,16 @@ const SearchFlight = () => {
                                     </div>
                                 }
                             </div>
-                            <div onClick={() => setOpen2(true)} className='cursor-pointer w-full border border-[#6295D6] rounded-xl p-4 flex flex-wrap gap-4'>
-                                <div className='w-[40px] h-[40px] rounded-full bg-[#3B7ACC] text-white flex items-center justify-center'>
-                                    <span className='font-bold text-[20px] leading-[40px]'>2</span>
+                            <div onClick={() => setOpen2(true)} className='cursor-pointer w-full border border-[#6295D6] rounded-xl p-1 md:p-2 lg:p-4 flex flex-wrap gap-1 md:gap-2 lg:gap-4'>
+                                <div className='w-[20px] h-[20px] md:w-[28px] md:h-[28px] lg:w-[40px] lg:h-[40px] rounded-full bg-[#3B7ACC] text-white flex items-center justify-center'>
+                                    <span className='font-bold text-[12px] md:text-[16px] ld:text-[20px]'>2</span>
                                 </div>
-                                <div className='flex flex-col gap-2 justify-start'>
-                                    <span className='text-[#2F62A3] font-bold text-[14px] leading-[32px]'>Sat, 23 Dec, 2023</span>
+                                <div className='w-full flex flex-col gap-2 justify-start'>
+                                    <span className='text-[#2F62A3] font-bold text-[8px] md:text-[10px] lg:text-[14px]'>Sat, 23 Dec, 2023</span>
                                     <div className='flex gap-1 items-center font-montserrat'>
-                                        <span className='font-bold text-[14px] leading-[22px]'>Singapore</span>
+                                        <span className='font-bold text-[8px] md:text-[10px] lg:text-[14px]'>Singapore</span>
                                         <FaLongArrowAltRight />
-                                        <span className='font-bold text-[14px] leading-[22px]'>TP HCM</span>
+                                        <span className='font-bold text-[8px] md:text-[10px] lg:text-[14px]'>TP HCM</span>
                                     </div>
                                 </div>
                                 {
@@ -242,24 +241,26 @@ const SearchFlight = () => {
                             </div>
                             <div className='flex flex-col gap-[4px] w-full'>
                                 <div className='flex w-full justify-between'>
-                                    <span className='font-semibold text-[14px] leading-[22px]'>Price</span>
-                                    <span><FaChevronUp size={12} /></span>
+                                    <span className='font-semibold text-[8px] md:text-[10px] lg:text-[14px]'>Price</span>
+                                    <span ><FaChevronUp className="text-black text-xs sm:text-sm md:text-base lg:text-lg" /></span>
                                 </div>
-                                <span className='font-extrabold text-[24px] leading-[22px] text-[#F08921]'>1,999,000 VND</span>
-                                <span className='font-light text-[12px] leading-[22px]'>/ per customer</span>
+                                <span className='font-extrabold text-[12px] sm:text-[16px] md:text-[20px] lg:text-[24px] text-[#F08921]'>1,999,000 VND</span>
+                                <span className='font-light text-[8px] md:text-[10px] lg:text-[12px]'>/ per customer</span>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-[24px] items-center rounded-xl border border-[#272727] p-4'>
-                            <div className='flex gap-[28px] items-center justify-between'>
-                                <span className='font-normal text-[12px] leading-[20px] text-[#272727] underline'>Reset</span>
-                                <span className='font-extrabold text-[32px] leading-[40px] text-[#272727] '>FILTER</span>
-                                <IoCloseCircle color='#F08921' size={28} />
+                        <div className='flex flex-col gap-[24px] items-center rounded-xl border border-[#272727] p-1 md:p-2 lg:p-4'>
+                            <div className='flex flex-col md:flex-row gap-[12px] items-center lg:justify-between'>
+                                <span className='font-normal text-[8px] md:text-[10px] lg:text-[12px] text-[#272727] underline'>Reset</span>
+                                <div className='flex gap-[12px] items-center'>
+                                    <span className='font-extrabold text-[12px] sm:text-[16px] md:text-[24px] lg:text-[32px] text-[#272727] '>FILTER</span>
+                                    <IoCloseCircle color='#F08921' className="text-xs sm:text-sm md:text-base lg:text-lg" />
+                                </div>
                             </div>
                             <div className='flex flex-col gap-[16px] w-full'>
                                 <div className='flex flex-col items-center gap-[8px] w-full'>
                                     <div className='w-full flex justify-between'>
-                                        <span className='font-bold text-[16px] leading-6 text-[#545454]'>Prices</span>
-                                        <FaChevronUp size={12} />
+                                        <span className='font-bold text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-[#545454]'>Prices</span>
+                                        <FaChevronUp className="text-xs sm:text-sm md:text-base lg:text-lg" />
                                     </div>
                                     <div className='flex flex-col gap-[12px] w-[90%] items-center font-montserrat'>
                                         <div
@@ -284,88 +285,88 @@ const SearchFlight = () => {
                                                 style={{ left: `${value}%`, transform: 'translate(-50%, -40%)' }}
                                             ></div>
                                         </div>
-                                        <span className='font-light text-[12px] leading-[24px] '>Up to 1,000,000,000 Currency Value</span>
+                                        <span className='text-center lg:text-left font-light text-[10px] lg:text-[12px]'>Up to 1,000,000,000 Currency Value</span>
                                     </div>
                                 </div>
                                 <div className='w-full h-[1px] bg-[#A9A9A9]'></div>
                                 <div className='w-full flex flex-col items-center gap-[8px]'>
                                     <div className='w-full flex justify-between'>
-                                        <span className='font-bold text-[16px] leading-6 text-[#545454]'>Airlines</span>
-                                        <FaChevronUp size={12} />
+                                        <span className='font-bold text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-[#545454]'>Airlines</span>
+                                        <FaChevronUp className="text-xs sm:text-sm md:text-base lg:text-lg" />
                                     </div>
-                                    <div className='w-full p-4 flex flex-col gap-[16px] items-start'>
-                                        <div className='flex gap-[8px] items-center'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <img className='w-[40px] h-[18px] object-content' src={airAsia} />
-                                            <span className='font-montserrat font-normal text-[12px] leading-6'>Air Asia</span>
+                                    <div className='w-full p-1 md:p-2 lg:p-4 flex flex-col gap-[8px] md:gap-[12px] lg:gap-[16px] items-start'>
+                                        <div className='w-full flex gap-[2px] md:gap-[4px] lg:gap-[8px] items-center'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <img className='w-[40%] lg:w-[40px] lg:h-[18px] object-content' src={airAsia} />
+                                            <span className='font-montserrat font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Air Asia</span>
                                         </div>
-                                        <div className='flex gap-[8px] items-center'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <img className='w-[80px] h-[10px] object-content' src={airCanada} />
-                                            <span className='font-montserrat font-normal text-[12px] leading-6'>Air Canada</span>
+                                        <div className='w-full flex gap-[2px] md:gap-[4px] lg:gap-[8px] items-center'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <img className='w-[40%] lg:w-[80px] lg:h-[10px] object-content' src={airCanada} />
+                                            <span className='font-montserrat font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Air Canada</span>
                                         </div>
-                                        <div className='flex gap-[8px] items-center'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <img className='w-[60px] h-[15px] object-content' src={airBamBoo} />
-                                            <span className='font-montserrat font-normal text-[12px] leading-6'>Bamboo Airlines</span>
+                                        <div className='w-full flex gap-[2px] md:gap-[4px] lg:gap-[8px] items-center'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <img className='w-[40%] lg:w-[60px] lg:h-[15px] object-content' src={airBamBoo} />
+                                            <span className='font-montserrat font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Bamboo Airlines</span>
                                         </div>
-                                        <div className='flex gap-[8px] items-center'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <img className='w-[80px] h-[7.3px] object-content' src={japanAir} />
-                                            <span className='font-montserrat font-normal text-[12px] leading-6'>Japan Airlines</span>
+                                        <div className='w-full flex gap-[2px] md:gap-[4px] lg:gap-[8px] items-center'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <img className='w-[40%] lg:w-[80px] lg:h-[7.3px] object-content' src={japanAir} />
+                                            <span className='font-montserrat font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Japan Airlines</span>
                                         </div>
-                                        <div className='flex gap-[8px] items-center'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <img className='w-[60px] h-[22px] object-content' src={singaporeAir} />
-                                            <span className='font-montserrat font-normal text-[12px] leading-6'>Singapore Airlines</span>
+                                        <div className='w-full flex gap-[2px] md:gap-[4px] lg:gap-[8px] items-center'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <img className='w-[40%] lg:w-[60px] lg:h-[22px] object-content' src={singaporeAir} />
+                                            <span className='font-montserrat font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Singapore Airlines</span>
                                         </div>
-                                        <div className='flex gap-[8px] items-center'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <img className='w-[60px] h-[16px] object-content' src={unitedAir} />
-                                            <span className='font-montserrat font-normal text-[12px] leading-6'>United Airlines</span>
+                                        <div className='w-full flex gap-[2px] md:gap-[4px] lg:gap-[8px] items-center'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <img className='w-[40%] lg:w-[60px] lg:h-[16px] object-content' src={unitedAir} />
+                                            <span className='font-montserrat font-normal text-[8px] md:text-[10px] lg:text-[12px]'>United Airlines</span>
                                         </div>
-                                        <div className='flex gap-[8px] items-center'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <img className='w-[60px] h-[10.37px] object-content' src={vietjetAir} />
-                                            <span className='font-montserrat font-normal text-[12px] leading-6'>Vietjet Air</span>
+                                        <div className='w-full flex gap-[2px] md:gap-[4px] lg:gap-[8px] items-center'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <img className='w-[40%] lg:w-[60px] lg:h-[10.37px] object-content' src={vietjetAir} />
+                                            <span className='font-montserrat font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Vietjet Air</span>
                                         </div>
-                                        <div className='flex gap-[8px] items-center'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <img className='w-[80px] h-[10.67px] object-contain' src={vietnamAir} />
-                                            <span className='font-montserrat font-normal text-[12px] leading-6'>Vietnam Airlines</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='w-full h-[1px] bg-[#A9A9A9]'></div>
-                                <div className='w-full flex flex-col items-center gap-[8px]'>
-                                    <div className='w-full flex justify-between'>
-                                        <span className='font-bold text-[16px] leading-6 text-[#545454]'>Number of stops</span>
-                                        <FaChevronUp size={12} />
-                                    </div>
-                                    <div className='w-full p-4 flex flex-col gap-[12px]'>
-                                        <div className='flex gap-[8px] items-center text-[#272727]'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <span className='font-normal text-[12px] leading-6'>Direct</span>
-                                        </div>
-                                        <div className='flex gap-[8px] items-center text-[#272727]'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <span className='font-normal text-[12px] leading-6'>1 stop</span>
-                                        </div>
-                                        <div className='flex gap-[8px] items-center text-[#272727]'>
-                                            <div className='w-[16px] h-[16px] rounded-[4px] border border-[#545454]'></div>
-                                            <span className='font-normal text-[12px] leading-6'>2 stops</span>
+                                        <div className='w-full flex gap-[2px] md:gap-[4px] lg:gap-[8px] items-center'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <img className='w-[40%] lg:w-[80px] lg:h-[10.67px] object-contain' src={vietnamAir} />
+                                            <span className='font-montserrat font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Vietnam Airlines</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='w-full h-[1px] bg-[#A9A9A9]'></div>
                                 <div className='w-full flex flex-col items-center gap-[8px]'>
                                     <div className='w-full flex justify-between'>
-                                        <span className='font-bold text-[16px] leading-6 text-[#545454]'>Take-off Time</span>
-                                        <FaChevronUp size={12} />
+                                        <span className='font-bold text-[8px] sm:text-[10px] md:text-[12px] lg:text-[16px] text-[#545454]'>Number of stops</span>
+                                        <FaChevronUp className="text-xs sm:text-sm md:text-base lg:text-lg" />
                                     </div>
-                                    <div className='w-full p-4 flex flex-col gap-[12px]'>
-                                        <span className='font-normal text-[12px] leading-[24px]'>Depart from:  Lorem Ipsum Dolor Sit Amet  Aonsectetur Adipiscing Elit</span>
-                                        <svg width="208" height="22" viewBox="0 0 208 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div className='w-full p-1 md:p-2 lg:p-4 flex flex-col gap-[12px]'>
+                                        <div className='flex gap-[8px] items-center text-[#272727]'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <span className='font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Direct</span>
+                                        </div>
+                                        <div className='flex gap-[8px] items-center text-[#272727]'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <span className='font-normal text-[8px] md:text-[10px] lg:text-[12px]'>1 stop</span>
+                                        </div>
+                                        <div className='flex gap-[8px] items-center text-[#272727]'>
+                                            <div className='w-[8px] flex-shrink-0 h-[8px] md:w-[12px] md:h-[12px] lg:w-[16px] lg:h-[16px] rounded-[4px] border border-[#545454]'></div>
+                                            <span className='font-normal text-[8px] md:text-[10px] lg:text-[12px]'>2 stops</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='w-full h-[1px] bg-[#A9A9A9]'></div>
+                                <div className='w-full flex flex-col items-center gap-[8px]'>
+                                    <div className='w-full flex justify-between'>
+                                        <span className='font-bold text-[8px] sm:text-[10px] md:text-[12px] lg:text-[16px] text-[#545454]'>Take-off Time</span>
+                                        <FaChevronUp className="text-xs sm:text-sm md:text-base lg:text-lg" />
+                                    </div>
+                                    <div className='w-full p-1 md:p-2 lg:p-4 flex flex-col gap-[12px]'>
+                                        <span className='font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Depart from:  Lorem Ipsum Dolor Sit Amet  Aonsectetur Adipiscing Elit</span>
+                                        <svg width="100%" height="auto" viewBox="0 0 208 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect y="9" width="208" height="2.7668" rx="1.3834" fill="#F3BF8F" />
                                             <rect x="0.000976562" y="9" width="145.6" height="2.7668" rx="1.3834" fill="#3B7ACC" />
                                             <g filter="url(#filter0_d_6342_16149)">
@@ -385,21 +386,21 @@ const SearchFlight = () => {
                                             </defs>
                                         </svg>
                                         <div className='flex justify-between'>
-                                            <span className='font-light text-[12px] leading-[24px] font-montserrat'>Between 0:00</span>
-                                            <span className='font-light text-[12px] leading-[24px] font-montserrat'>and</span>
-                                            <span className='font-light text-[12px] leading-[24px] font-montserrat'>24:00</span>
+                                            <span className='font-light text-[8px] md:text-[10px] lg:text-[12px] leading-[24px] font-montserrat'>Between 0:00</span>
+                                            <span className='font-light text-[8px] md:text-[10px] lg:text-[12px] leading-[24px] font-montserrat'>and</span>
+                                            <span className='font-light text-[8px] md:text-[10px] lg:text-[12px] leading-[24px] font-montserrat'>24:00</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='w-full h-[1px] bg-[#A9A9A9]'></div>
                                 <div className='w-full flex flex-col items-center gap-[8px]'>
                                     <div className='w-full flex justify-between'>
-                                        <span className='font-bold text-[16px] leading-6 text-[#545454]'>Landing Time</span>
-                                        <FaChevronUp size={12} />
+                                        <span className='font-bold text-[8px] sm:text-[10px] md:text-[12px] lg:text-[16px] text-[#545454]'>Landing Time</span>
+                                        <FaChevronUp className="text-xs sm:text-sm md:text-base lg:text-lg" />
                                     </div>
-                                    <div className='w-full p-4 flex flex-col gap-[12px]'>
-                                        <span className='font-normal text-[12px] leading-[24px]'>Depart from:  Lorem Ipsum Dolor Sit Amet  Aonsectetur Adipiscing Elit</span>
-                                        <svg width="208" height="22" viewBox="0 0 208 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div className='w-full p-1 md:p-2 lg:p-4 flex flex-col gap-[12px]'>
+                                        <span className='font-normal text-[8px] md:text-[10px] lg:text-[12px]'>Depart from:  Lorem Ipsum Dolor Sit Amet  Aonsectetur Adipiscing Elit</span>
+                                        <svg width="100%" height="auto" viewBox="0 0 208 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect y="9" width="208" height="2.7668" rx="1.3834" fill="#F3BF8F" />
                                             <rect x="0.000976562" y="9" width="145.6" height="2.7668" rx="1.3834" fill="#3B7ACC" />
                                             <g filter="url(#filter0_d_6342_16149)">
@@ -419,17 +420,17 @@ const SearchFlight = () => {
                                             </defs>
                                         </svg>
                                         <div className='flex justify-between'>
-                                            <span className='font-light text-[12px] leading-[24px] font-montserrat'>Between 0:00</span>
-                                            <span className='font-light text-[12px] leading-[24px] font-montserrat'>and</span>
-                                            <span className='font-light text-[12px] leading-[24px] font-montserrat'>24:00</span>
+                                            <span className='font-light text-[8px] md:text-[10px] lg:text-[12px] leading-[24px] font-montserrat'>Between 0:00</span>
+                                            <span className='font-light text-[8px] md:text-[10px] lg:text-[12px] leading-[24px] font-montserrat'>and</span>
+                                            <span className='font-light text-[8px] md:text-[10px] lg:text-[12px] leading-[24px] font-montserrat'>24:00</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='w-full h-[1px] bg-[#A9A9A9]'></div>
                                 <div className='w-full flex flex-col items-center gap-[8px]'>
                                     <div className='w-full flex justify-between'>
-                                        <span className='font-bold text-[16px] leading-6 text-[#545454]'>Landing Time</span>
-                                        <FaChevronUp size={12} />
+                                        <span className='font-bold text-[8px] sm:text-[10px] md:text-[12px] lg:text-[16px] text-[#545454]'>Landing Time</span>
+                                        <FaChevronUp className="text-xs sm:text-sm md:text-base lg:text-lg" />
                                     </div>
                                     <div className='flex flex-col gap-[12px] w-[90%] items-start font-montserrat'>
                                         <div
@@ -454,7 +455,7 @@ const SearchFlight = () => {
                                                 style={{ left: `${value1}%`, transform: 'translate(-50%, -40%)' }}
                                             ></div>
                                         </div>
-                                        <span className='font-light text-[12px] leading-[24px] '>Under 48 hours</span>
+                                        <span className='font-light text-[8px] md:text-[10px] lg:text-[12px]'>Under 48 hours</span>
                                     </div>
                                 </div>
                             </div>
@@ -463,38 +464,38 @@ const SearchFlight = () => {
                     <div className='w-[70%] flex flex-col gap-[44px]'>
                         <div className='flex justify-between'>
                             <div className='flex flex-col gap-[16px]'>
-                                <span className='font-extrabold text-[40px] leading-[52px] underline'>SELECTED RESULT</span>
-                                <span className='font-normal text-[16px] leading-[24px]'>Results after having applied filter, prices include taxes and fees.</span>
+                                <span className='font-extrabold text-[28px] md:text-[32px] lg:text-[40px] underline'>SELECTED RESULT</span>
+                                <span className='font-normal text-[12px] md:text-[14px] lg:text-[16px]'>Results after having applied filter, prices include taxes and fees.</span>
                             </div>
-                            <div className='flex gap-[8px] items-center'>
+                            <div className='flex flex-col lg:flex-row gap-[8px] lg:items-center'>
                                 <div className='flex gap-[8px] items-center'>
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 17H21M12 11H18M12 5H15M3 14.625L4.50518 16.3183C5.30076 17.2134 6.69924 17.2134 7.49482 16.3183L9 14.625M6 17V5" stroke="#272727" strokeWidth="2.2268" strokeLinecap="round" />
                                     </svg>
-                                    <span className='font-bold text-[20px] leading-[26px]'>SORTED BY:</span>
+                                    <span className='font-bold text-[10px] sm:text-[12px] md:text-[16px] lg:text-[20px]'>SORTED BY:</span>
                                 </div>
-                                <div className='w-fit h-fit px-[25px] py-[10px] rounded-2xl bg-[#3B7ACC]'>
-                                    <span className='font-bold text-[14px] leading-6 text-white'>Lowest Price</span>
+                                <div className='p-2 lg:px-[25px] lg:py-[10px] rounded-2xl bg-[#3B7ACC] flex justify-center items-center'>
+                                    <span className='text-center font-bold text-[10px] md:text-[12px] lg:text-[14px] text-white'>Lowest Price</span>
                                 </div>
                             </div>
                         </div>
                         <div className='flex flex-col'>
                             <div className='w-full rounded-t-xl bg-[#3B7ACC] py-[10px] flex justify-center'>
-                                <span className='font-montserrat text-white font-bold text-[20xp] leading-[22px]'>Most suitable with the filtered results</span>
+                                <span className='font-montserrat text-white font-bold text-[10px] sm:text-[12px] md:text-[16px] lg:text-[20px]'>Most suitable with the filtered results</span>
                             </div>
                             <div className='flex flex-col gap-[40px]'>
-                                <div className='w-full rounded-b-xl border border-[#2F62A3] px-4 py-6 flex flex-col gap-[24px]'>
-                                    <div className='flex justify-between'>
+                                <div className='w-full rounded-b-xl border border-[#2F62A3] px-4 py-6 flex flex-col gap-[4px] sm:gap-[8px] md:gap-[12px] lg:gap-[24px]'>
+                                    <div className='flex flex-col gap-[12px] lg:flex-row lg:justify-between'>
                                         <div className='flex gap-[8px] items-center'>
                                             <div className='p-2 rounded-xl border border-[#7F7F7F] bg-[#FFFCF7]'>
                                                 <img src={airBamBoo} className='w-[46px] h-[21px] object-contain' />
                                             </div>
-                                            <span className='font-bold text-[24px] leading-[28px] text-[#272727]'>Bamboo Airlines</span>
+                                            <span className='font-bold text-[12px] sm:text-[16px] md:text-[20px] lg:text-[24px] text-[#272727]'>Bamboo Airlines</span>
                                         </div>
                                         <div className='flex gap-[10px]'>
-                                            <div className='px-4 py-1 border border-[#7F7F7F] rounded-xl flex justify-center items-center'>BB303</div>
-                                            <div className='px-4 py-1 border border-[#7F7F7F] rounded-xl flex justify-center items-center'>BOEING 777</div>
-                                            <div className='px-4 py-1 border border-[#7F7F7F] rounded-xl flex justify-center items-center'>Economy Class</div>
+                                            <div className='p-1 md:px-2 lg:px-4 lg:py-1 border border-[#7F7F7F] rounded-xl flex justify-center items-center text-xs sm:text-sm md:text-md lg:text-lg'>BB303</div>
+                                            <div className='p-1 md:px-2 lg:px-4 lg:py-1 border border-[#7F7F7F] rounded-xl flex justify-center items-center text-xs sm:text-sm md:text-md lg:text-lg'>BOEING 777</div>
+                                            <div className='p-1 md:px-2 lg:px-4 lg:py-1 border border-[#7F7F7F] rounded-xl flex justify-center items-center text-xs sm:text-sm md:text-md lg:text-lg'>Economy Class</div>
                                         </div>
                                     </div>
                                     <div className='flex justify-between items-center'>

@@ -85,17 +85,17 @@ const VisaApply = () => {
         <div className='my-[24px] full relative w-full flex flex-col gap-[40px]'>
             <div className='w-[80px] h-[20px] bg-[#F08921] absolute left-0 hidden xl:flex'></div>
             <div className='w-full lg:w-main p-4 lg:p-0 mx-auto h-[40px] flex justify-between items-start'>
-                <div className='w-full lg:w-[592px] lg:h-[40px] flex overflow-x-auto items-center gap-[8px] md:gap-[12px] lg:gap-[16px]'>
+                <div className='w-full lg:w-[592px] lg:h-[40px] flex overflow-x-auto scrollbar-none items-center gap-[8px] md:gap-[12px] lg:gap-[16px]'>
                     <div onClick={() => { router.push(`/`) }} className='px-2 py-1 lg:p-0 lg:w-[88px] lg:h-[40px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] flex items-center justify-center hover:bg-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out cursor-pointer text-sm lg:text-lg'>Home</div>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.83331 12.3513V7.64882C5.83331 6.10524 7.50774 5.1435 8.84106 5.92127L12.8718 8.27252C14.1948 9.04428 14.1948 10.9559 12.8718 11.7276L8.84106 14.0789C7.50774 14.8567 5.83331 13.8949 5.83331 12.3513Z" stroke="#3B7ACC" strokeLinejoin="round" />
                     </svg>
-                    <div onClick={() => { router.push(`/${path.COUNTRY_DETAIL}`) }} className='px-2 py-1 lg:p-0 lg:w-[100px] lg:h-[40px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] flex items-center justify-center hover:bg-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out cursor-pointer text-sm lg:text-lg'>Country</div>
+                    <div onClick={() => { router.push(`/${path.COUNTRY_DETAIL}`) }} className='px-2 py-1 w-full lg:p-0 lg:w-[100px] lg:h-[40px] rounded-2xl border border-[#3B7ACC] text-[#3B7ACC] flex items-center justify-center hover:bg-[#3B7ACC] hover:text-white transition-all duration-300 ease-in-out cursor-pointer text-sm lg:text-lg'>Country</div>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.83331 12.3513V7.64882C5.83331 6.10524 7.50774 5.1435 8.84106 5.92127L12.8718 8.27252C14.1948 9.04428 14.1948 10.9559 12.8718 11.7276L8.84106 14.0789C7.50774 14.8567 5.83331 13.8949 5.83331 12.3513Z" stroke="#3B7ACC" strokeLinejoin="round" />
                     </svg>
-                    <div className='px-2 py-1 lg:p-0 lg:w-[300px] lg:h-[40px] rounded-2xl border border-[#3B7ACC] bg-[#3B7ACC] text-white flex items-center justify-center'>
-                        <span className='font-bold text-sm lg:text-[16px]'>Get Your Global Evisa Now !</span>
+                    <div className='px-2 py-1 w-full lg:p-0 lg:w-[300px] lg:h-[40px] rounded-2xl border border-[#3B7ACC] bg-[#3B7ACC] text-white flex items-center justify-center'>
+                        <span className='font-bold text-sm lg:text-[16px] whitespace-nowrap'>Get Your Global Evisa Now !</span>
                     </div>
                 </div>
             </div>

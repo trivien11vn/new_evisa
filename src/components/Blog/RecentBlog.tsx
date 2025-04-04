@@ -4,7 +4,7 @@ const RecentBlog = ({image, title, text}: { image: string; title: string; text: 
   return (
     <div className='p-4 bg-[#FFFCF7] w-full h-full border border-[#3B7ACC] rounded-2xl flex flex-col justify-between'>
       <div className='flex flex-col gap-3'>
-        <img src={image} className='rounded-2xl object-contain'/>
+        <img src={image} className='rounded-2xl w-full h-[160px] lg:h-[200px] md:h-[180px] object-cover'/>
         <span className='font-bold text-[18px] leading-[24px]'>{title}</span>
         <span className='font-normal text-[14px] leading-[20px]'>{text}</span>
       </div>
